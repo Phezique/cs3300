@@ -1,9 +1,3 @@
-require 'rails_helper'
-
-RSpec.feature "HomePage:s", type: :feature do
-  pending "add some scenarios (or delete) #{__FILE__}"
-end
-
 require "rails_helper"
 
 RSpec.feature "Visiting the homepage", type: :feature do
