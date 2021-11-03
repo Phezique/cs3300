@@ -32,6 +32,18 @@ group :production do
   gem 'rails_12factor'
 end
 
+#Adding mini_racer and rspec to the gem file
+gem 'mini_racer'
+  
+  group :development, :test do
+    gem 'rspec-rails', '~> 3.7'
+  end
+
+  
+group :development, :test do
+  gem 'capybara'
+end
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -58,10 +70,13 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
+  #gem 'capybara', '>= 2.15' //added below other custom gems on lines 35 - 44
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+
+  #Easy installation of simplecov using custom gem
+  gem 'simplecov', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
